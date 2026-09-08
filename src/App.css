@@ -335,3 +335,89 @@ body {
     height: 220px;
   }
 }
+/* --- VISTA DE INICIO (HERO CON FONDO) --- */
+.hero-section {
+  text-align: center;
+  
+  /* Asegura que la sección tenga altura y espaciado */
+  min-height: 80vh; /* Altura mínima de la portada */
+  padding: 4rem 2rem; /* Espaciado interno generoso */
+  
+  /* Centrado del contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;    /* Centra horizontalmente */
+  
+  /* MUY IMPORTANTE: Para la legibilidad sobre la imagen */
+  position: relative; /* Para la capa superpuesta si la usas */
+  color: #ffffff; /* Asegura que el texto principal sea blanco */
+  
+  /* Opcional: Añade una capa oscura superpuesta directamente en CSS */
+}
+
+/* Capa oscura superpuesta (overlay) opcional pero RECOMENDADA */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Color negro con 60% de opacidad */
+  z-index: 1; /* Coloca la capa detrás del contenido */
+}
+
+/* Asegura que todo el contenido esté SOBRE la capa oscura */
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Envoltorio opcional para el texto de bienvenida */
+.hero-content-wrapper {
+  max-width: 800px; /* Limita el ancho del texto para mejor lectura */
+  margin-bottom: 3rem; /* Espacio antes de la cuadrícula de tarjetas */
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: #0284c7; /* Un azul que resalte */
+  color: #e0f2fe;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section h2 {
+  color: #ffffff; /* Título en blanco */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para resaltar */
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #e2e8f0; /* Párrafo en gris muy claro */
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Asegúrate de que tus feature-cards sigan viéndose bien */
+.features-grid {
+  /* ... tu configuración de grid existente ... */
+  max-width: 1000px;
+  width: 100%;
+}
+
+.feature-card {
+  /* ... tus estilos existentes ... */
+  background-color: rgba(15, 23, 42, 0.9); /* Fondo de tarjeta semi-transparente */
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  color: #f8fafc;
+  /* ... resto de estilos ... */
+}
