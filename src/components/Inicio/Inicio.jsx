@@ -5,7 +5,7 @@ export default function Inicio({ onNavigate }) {
     <section
       className="hero-section"
       style={{
-        backgroundImage: `linear-gradient(rgba(244, 245, 248, 0.51), rgba(0, 3, 9, 0.95)), url(${fondoInicio})`,
+        backgroundImage: `linear-gradient(rgba(244, 245, 248, 0.51), rgba(22, 24, 28, 0.95)), url('/GripenFAC.jpg'`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         borderRadius: '12px',
