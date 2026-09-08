@@ -1,0 +1,337 @@
+/* --- ESTILOS GENERALES --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #0b1120;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 0.85rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-icon {
+  font-size: 1.6rem;
+}
+
+.logo {
+  font-size: 1.35rem;
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.nav-btn.active {
+  background-color: #0284c7;
+  border-color: #38bdf8;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.content {
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+  flex: 1;
+}
+
+.page {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid #334155;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page h2 {
+  color: #38bdf8;
+  margin-bottom: 1rem;
+  font-size: 1.65rem;
+  border-bottom: 2px solid #0284c7;
+  padding-bottom: 0.4rem;
+}
+
+.page p {
+  margin-bottom: 1.2rem;
+  color: #cbd5e1;
+}
+
+/* --- BANNER IMAGEN DESTACADA (HISTORIA) --- */
+.image-banner-container {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+  border: 1px solid #334155;
+}
+
+.banner-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.img-caption {
+  display: block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  padding: 0.6rem 1rem;
+  background-color: #0f172a;
+  text-align: center;
+  font-style: italic;
+}
+
+/* --- STATUS BOX --- */
+.status-box {
+  background-color: #0f172a;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #38bdf8;
+  color: #94a3b8;
+  margin-top: 1.5rem;
+}
+
+.status-box strong {
+  color: #f8fafc;
+}
+
+/* --- GALERÍA DE MODELISMO (TARJETAS) --- */
+.aircraft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.aircraft-card {
+  background-color: #0f172a;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #334155;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-wrapper {
+  height: 190px;
+  width: 100%;
+  background-color: #000;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 1.2rem;
+  flex: 1;
+}
+
+.card-content h3 {
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+/* --- CURIOSIDADES --- */
+.card-fact {
+  background-color: #0f172a;
+  border: 1px dashed #38bdf8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.card-fact p {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  color: #f1f5f9;
+}
+
+.action-btn {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #0369a1;
+}
+
+/* --- FORMULARIO DE CAPTURA (NUEVO) --- */
+.capture-form {
+  background-color: #0f172a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  color: #ffffff;
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #38bdf8;
+}
+
+.form-success {
+  border-left-color: #22c55e;
+  color: #22c55e;
+}
+
+.subheading {
+  color: #38bdf8;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.hangar-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #0f172a;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+
+.hangar-table th,
+.hangar-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #1e293b;
+  font-size: 0.9rem;
+}
+
+.hangar-table th {
+  background-color: #1e293b;
+  color: #38bdf8;
+}
+
+.badge {
+  background-color: #0369a1;
+  color: #e0f2fe;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-buttons {
+    width: 100%;
+  }
+  .nav-btn {
+    flex: 1;
+    text-align: center;
+  }
+  .banner-img {
+    height: 220px;
+  }
+}
