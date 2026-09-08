@@ -7,7 +7,7 @@ import Curiosidades from './components/Curiosidades/Curiosidades';
 import Formulario from './components/Formulario/Formulario';
 import Acerca from './components/Acerca/Acerca';
 import Visitas from './components/Visitas/Visitas';
-import './App.css';
+import './styles/Global.css';
 
 
 export default function App() {

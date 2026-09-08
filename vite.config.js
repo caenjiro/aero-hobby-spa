@@ -11,4 +11,18 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
   },
+    test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/setup.js'],
+    globals: true
+  },
+  resolve: {
+    alias: [
+      {
+        // Expresión regular que atrapa importaciones de imágenes
+        find: /.+\.(jpg|jpeg|png|gif|webp|svg)$/,
+        replacement: '/src/tests/fileMock.js'
+      }
+    ]
+  }  
 });
