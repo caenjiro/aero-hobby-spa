@@ -5,7 +5,7 @@ const CURIOSIDADES = [
   'El F-16 fue el primer caza de producción diseñado intencionalmente para ser aerodinámicamente inestable y mejorar su maniobrabilidad.',
   'El Saab Gripen está optimizado para despegar y aterrizar en tramos de carreteras públicas convencionales suecas de solo 800 metros.',
   'Las llantas de los aviones comerciales se llenan con nitrógeno seco para prevenir explosiones a temperaturas extremas.',
-  'El fuselaje del SR-71 utilizaba titanio adquirido discretamente a la Unión Soviética a través de empresas fantasma.'
+  'El fuselaje del SR-71 utilizaba titanio adquirido discretamente a la Unión Soviética a través de empresas fantasma. Esto es un rumor'
 ];
 
 export default function Curiosidades() {
